@@ -1,0 +1,406 @@
+/* Analyze Evidence Page - Terminal Aesthetic */
+
+/* Page Header */
+header {
+    border: 1px solid var(--terminal-border);
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+header h1::before {
+    content: '# ';
+    color: var(--terminal-highlight);
+}
+
+/* Analysis Workspace */
+.analysis-workspace {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Evidence Board */
+.evidence-board {
+    border: 1px solid var(--terminal-border);
+    padding: 2rem;
+    margin-bottom: 2rem;
+    min-height: 400px;
+    position: relative;
+}
+
+.evidence-board h3 {
+    color: var(--terminal-text);
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+}
+
+.evidence-board h3::before {
+    content: '@ ';
+    color: var(--terminal-highlight);
+}
+
+/* Connection Canvas */
+.connection-canvas {
+    border: 1px solid var(--terminal-border);
+    background: var(--terminal-bg);
+    min-height: 300px;
+    position: relative;
+    margin-bottom: 1rem;
+}
+
+/* Evidence Nodes */
+.evidence-node {
+    position: absolute;
+    border: 1px solid var(--terminal-border);
+    background: var(--terminal-bg);
+    padding: 0.75rem;
+    min-width: 120px;
+    cursor: move;
+    transition: border-color 0.2s ease;
+}
+
+.evidence-node:hover {
+    border-color: var(--terminal-text);
+}
+
+.evidence-node.selected {
+    border-color: var(--terminal-highlight);
+    background: rgba(255, 102, 0, 0.1);
+}
+
+.evidence-node.connected {
+    border-color: var(--terminal-success);
+}
+
+.node-header {
+    color: var(--terminal-text);
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    margin-bottom: 0.25rem;
+}
+
+.node-content {
+    color: var(--terminal-text-dim);
+    font-size: 0.7rem;
+    line-height: 1.3;
+}
+
+/* Relevance Badges */
+.relevance-badge {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    padding: 0.25rem 0.5rem;
+    font-size: 0.6rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border: 1px solid;
+}
+
+.relevance-badge.high {
+    color: var(--terminal-error);
+    border-color: var(--terminal-error);
+    background: var(--terminal-bg);
+}
+
+.relevance-badge.medium {
+    color: var(--terminal-warning);
+    border-color: var(--terminal-warning);
+    background: var(--terminal-bg);
+}
+
+.relevance-badge.low {
+    color: var(--terminal-success);
+    border-color: var(--terminal-success);
+    background: var(--terminal-bg);
+}
+
+/* Connection Tools */
+.connection-tools {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.btn-small {
+    padding: 0.5rem 1rem;
+    font-size: 0.8rem;
+    background: transparent;
+    border: 1px solid var(--terminal-border);
+    color: var(--terminal-text-dim);
+    font-family: inherit;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.btn-small:hover {
+    border-color: var(--terminal-text);
+    color: var(--terminal-text);
+}
+
+.btn-small.active {
+    background: var(--terminal-text);
+    color: var(--terminal-bg);
+}
+
+/* Connection Lines */
+.connection-lines {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.connection-line {
+    stroke: var(--terminal-success);
+    stroke-width: 2;
+    fill: none;
+}
+
+/* Suspects Analysis */
+.suspects-analysis {
+    border: 1px solid var(--terminal-border);
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.suspects-analysis h3 {
+    color: var(--terminal-text);
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+}
+
+.suspects-analysis h3::before {
+    content: '* ';
+    color: var(--terminal-highlight);
+}
+
+.suspects-evidence-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+}
+
+/* Suspect Analysis Card */
+.suspect-analysis-card {
+    border: 1px solid var(--terminal-border);
+    padding: 1rem;
+    transition: border-color 0.2s ease;
+}
+
+.suspect-analysis-card:hover {
+    border-color: var(--terminal-text);
+}
+
+.suspect-analysis-card h4 {
+    color: var(--terminal-text);
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+}
+
+.suspect-analysis-card h4::before {
+    content: '> ';
+    color: var(--terminal-highlight);
+}
+
+/* Suspicion Meter */
+.suspicion-meter {
+    margin: 1rem 0;
+}
+
+.suspicion-meter .meter-label {
+    color: var(--terminal-text-dim);
+    font-size: 0.8rem;
+    margin-bottom: 0.25rem;
+    text-transform: uppercase;
+}
+
+.meter-bar {
+    width: 100%;
+    height: 15px;
+    border: 1px solid var(--terminal-border);
+    background: var(--terminal-bg);
+    position: relative;
+}
+
+.meter-fill {
+    height: 100%;
+    transition: width 0.3s ease;
+}
+
+.meter-fill.low {
+    background: var(--terminal-success);
+}
+
+.meter-fill.medium {
+    background: var(--terminal-warning);
+}
+
+.meter-fill.high {
+    background: var(--terminal-error);
+}
+
+.meter-percentage {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--terminal-text);
+    font-size: 0.7rem;
+    font-weight: normal;
+}
+
+/* Theory Builder */
+.theory-builder {
+    border: 1px solid var(--terminal-border);
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.theory-builder h3 {
+    color: var(--terminal-text);
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+}
+
+.theory-builder h3::before {
+    content: '$ ';
+    color: var(--terminal-success);
+}
+
+.theory-section {
+    margin-bottom: 1.5rem;
+}
+
+.theory-section h4 {
+    color: var(--terminal-text);
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+}
+
+.theory-section h4::before {
+    content: '- ';
+    color: var(--terminal-highlight);
+}
+
+/* Key Evidence Selector */
+.key-evidence-selector {
+    border: 1px solid var(--terminal-border);
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+
+.evidence-checkbox {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.5rem;
+    cursor: pointer;
+}
+
+.evidence-checkbox input[type="checkbox"] {
+    margin-right: 0.5rem;
+    accent-color: var(--terminal-success);
+}
+
+.evidence-checkbox label {
+    color: var(--terminal-text-dim);
+    font-size: 0.9rem;
+    cursor: pointer;
+}
+
+.evidence-checkbox input[type="checkbox"]:checked + label {
+    color: var(--terminal-text);
+}
+
+/* Theory Actions */
+.theory-actions {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.theory-actions .btn {
+    flex: 1;
+    min-width: 120px;
+}
+
+/* No Evidence State */
+.no-evidence {
+    text-align: center;
+    padding: 2rem;
+    color: var(--terminal-text-dim);
+    border: 1px solid var(--terminal-border);
+    font-style: italic;
+}
+
+.no-evidence::before {
+    content: '[NO DATA] ';
+    color: var(--terminal-error);
+}
+
+/* Analysis Results */
+.analysis-results {
+    border: 1px solid var(--terminal-border);
+    padding: 1.5rem;
+    margin-top: 2rem;
+}
+
+.analysis-results h3 {
+    color: var(--terminal-text);
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+}
+
+.analysis-results h3::before {
+    content: '>> ';
+    color: var(--terminal-success);
+}
+
+.result-item {
+    border: 1px solid var(--terminal-border);
+    padding: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.result-item h4 {
+    color: var(--terminal-highlight);
+    margin-bottom: 0.25rem;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+}
+
+.result-item p {
+    color: var(--terminal-text-dim);
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .connection-tools {
+        flex-wrap: wrap;
+    }
+    
+    .suspects-evidence-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .theory-actions {
+        flex-direction: column;
+    }
+    
+    .theory-actions .btn {
+        width: 100%;
+    }
+    
+    .evidence-node {
+        position: relative;
+        margin-bottom: 1rem;
+        cursor: default;
+    }
+}

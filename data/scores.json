@@ -1,0 +1,47 @@
+[
+    {
+        "user_id": "user_6873029e170701.63832540",
+        "username": "kola",
+        "case_id": "missing_heirloom",
+        "score": 350,
+        "completed_at": "2025-07-13 02:51:30",
+        "time_taken": 130,
+        "status": "solved"
+    },
+    {
+        "user_id": "user_6873029e170701.63832540",
+        "username": "kola",
+        "case_id": "night_museum",
+        "score": 0,
+        "completed_at": "2025-07-13 03:08:30",
+        "time_taken": 148,
+        "status": "failed"
+    },
+    {
+        "user_id": "user_6873efd4d06a88.76473110",
+        "username": "user_2_test",
+        "case_id": "missing_heirloom",
+        "score": 350,
+        "completed_at": "2025-07-13 18:46:53",
+        "time_taken": 57,
+        "status": "solved"
+    },
+    {
+        "user_id": "user_687403c9d21626.46424666",
+        "username": "user_3_test",
+        "case_id": "missing_heirloom",
+        "score": 350,
+        "completed_at": "2025-07-13 19:07:55",
+        "time_taken": 55,
+        "status": "solved"
+    },
+    {
+        "user_id": "user_6873029e170701.63832540",
+        "username": "kola",
+        "case_id": "corporate_conspiracy",
+        "score": 636,
+        "completed_at": "2025-07-13 22:05:31",
+        "time_taken": 4577,
+        "status": "solved"
+    }
+]

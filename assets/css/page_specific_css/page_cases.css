@@ -1,0 +1,350 @@
+/* Cases Page - Terminal Aesthetic */
+
+/* Page Header */
+header {
+    text-align: center;
+    margin-bottom: 2rem;
+    border: 1px solid var(--terminal-border);
+    padding: 1.5rem;
+}
+
+header h1::before {
+    content: '# ';
+    color: var(--terminal-highlight);
+}
+
+/* Filters */
+.filters {
+    border: 1px solid var(--terminal-border);
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.filters h3 {
+    color: var(--terminal-text);
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.filters h3::before {
+    content: '$ ';
+    color: var(--terminal-success);
+}
+
+.filter-group {
+    display: grid;
+    grid-template-columns: 1fr 1fr auto;
+    gap: 1rem;
+    align-items: end;
+}
+
+.filter-group > div {
+    display: flex;
+    flex-direction: column;
+}
+
+.filter-select {
+    padding: 0.75rem;
+    background: var(--terminal-bg);
+    border: 1px solid var(--terminal-border);
+    color: var(--terminal-text);
+    font-family: inherit;
+}
+
+.filter-select:focus {
+    outline: none;
+    border-color: var(--terminal-text);
+}
+
+/* Cases Section */
+.cases-section h2 {
+    color: var(--terminal-text);
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.cases-section h2::before {
+    content: '> ';
+    color: var(--terminal-highlight);
+}
+
+/* Cases Grid */
+.cases-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1rem;
+}
+
+/* Case Card */
+.case-card {
+    background: rgba(26, 26, 26, 0.6);
+    border: 1px solid var(--terminal-border);
+    padding: 1.5rem;
+    transition: all 0.3s ease;
+    position: relative;
+    border-radius: 8px;
+    backdrop-filter: blur(15px);
+    overflow: hidden;
+}
+
+.case-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, var(--terminal-highlight), var(--neon-cyan), var(--neon-purple));
+    transform: translateX(-100%);
+    transition: transform 0.5s ease;
+}
+
+.case-card:hover {
+    border-color: var(--terminal-highlight);
+    background: rgba(255, 102, 0, 0.1);
+    transform: translateY(-8px);
+    box-shadow: 0 15px 40px rgba(255, 102, 0, 0.3);
+}
+
+.case-card:hover::before {
+    transform: translateX(0);
+}
+
+/* Difficulty Badge */
+.difficulty-badge {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    padding: 0.4rem 0.8rem;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border: 1px solid;
+    border-radius: 20px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+}
+
+.difficulty-badge.difficulty-beginner {
+    color: var(--terminal-success);
+    border-color: var(--terminal-success);
+    background: rgba(0, 255, 170, 0.15);
+    box-shadow: 0 0 10px rgba(0, 255, 170, 0.3);
+}
+
+.difficulty-badge.difficulty-intermediate {
+    color: var(--terminal-warning);
+    border-color: var(--terminal-warning);
+    background: rgba(255, 170, 0, 0.15);
+    box-shadow: 0 0 10px rgba(255, 170, 0, 0.3);
+}
+
+.difficulty-badge.difficulty-advanced {
+    color: var(--terminal-highlight);
+    border-color: var(--terminal-highlight);
+    background: rgba(255, 102, 0, 0.15);
+    box-shadow: 0 0 10px rgba(255, 102, 0, 0.3);
+}
+
+.difficulty-badge.difficulty-expert {
+    color: var(--terminal-error);
+    border-color: var(--terminal-error);
+    background: rgba(255, 0, 102, 0.15);
+    box-shadow: 0 0 10px rgba(255, 0, 102, 0.3);
+}
+
+/* Case Preview Area */
+.case-preview-area {
+    border: 1px solid var(--terminal-border);
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+.case-icon {
+    font-size: 2rem;
+    color: var(--terminal-text-dim);
+    font-weight: normal;
+}
+
+/* Case Content */
+.case-card h3 {
+    color: var(--terminal-text);
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    border-bottom: 1px solid var(--terminal-border);
+    padding-bottom: 0.5rem;
+}
+
+.case-card h3::before {
+    content: '> ';
+    color: var(--terminal-highlight);
+}
+
+.case-description {
+    color: var(--terminal-text-dim);
+    margin-bottom: 1rem;
+    line-height: 1.5;
+}
+
+/* Case Meta */
+.case-meta {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+    border: 1px solid var(--terminal-border);
+    font-size: 0.9rem;
+    color: var(--terminal-text-dim);
+}
+
+/* Case Actions */
+.case-actions {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.case-status-badge {
+    display: block;
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 0.8rem;
+    border: 1px solid;
+}
+
+.case-status-badge.completed {
+    color: var(--terminal-success);
+    border-color: var(--terminal-success);
+}
+
+.case-status-badge.current {
+    color: var(--terminal-warning);
+    border-color: var(--terminal-warning);
+}
+
+/* Action Buttons */
+.case-action-btn {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background: transparent;
+    border: 1px solid;
+    color: inherit;
+    font-family: inherit;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.2s ease;
+    font-size: 0.9rem;
+}
+
+.start-btn {
+    border-color: var(--terminal-highlight);
+    color: var(--terminal-highlight);
+}
+
+.start-btn:hover {
+    background: var(--terminal-highlight);
+    color: var(--terminal-bg);
+}
+
+.continue-btn {
+    border-color: var(--terminal-success);
+    color: var(--terminal-success);
+}
+
+.continue-btn:hover {
+    background: var(--terminal-success);
+    color: var(--terminal-bg);
+}
+
+.review-btn {
+    border-color: var(--terminal-text-dim);
+    color: var(--terminal-text-dim);
+}
+
+.review-btn:hover {
+    background: var(--terminal-text-dim);
+    color: var(--terminal-bg);
+}
+
+/* Case Preview */
+.case-preview {
+    border: 1px solid var(--terminal-border);
+    padding: 1rem;
+    margin-top: 1rem;
+}
+
+.case-preview h4 {
+    color: var(--terminal-text);
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+}
+
+.case-preview h4::before {
+    content: '* ';
+    color: var(--terminal-highlight);
+}
+
+.case-preview p {
+    color: var(--terminal-text-dim);
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+}
+
+.preview-text {
+    font-style: italic;
+}
+
+/* Current Case Warning */
+.current-case-warning {
+    border: 1px solid var(--terminal-warning);
+    padding: 1.5rem;
+    margin-top: 2rem;
+}
+
+.current-case-warning h3 {
+    color: var(--terminal-warning);
+    margin-bottom: 1rem;
+}
+
+.current-case-warning h3::before {
+    content: '[WARNING] ';
+}
+
+.current-case-warning p {
+    color: var(--terminal-text-dim);
+}
+
+/* No Cases State */
+.no-cases {
+    text-align: center;
+    padding: 2rem;
+    border: 1px solid var(--terminal-border);
+    color: var(--terminal-text-dim);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .filter-group {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    .cases-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .case-meta {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+}

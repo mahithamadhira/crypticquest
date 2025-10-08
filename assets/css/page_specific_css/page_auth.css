@@ -1,0 +1,242 @@
+/* Authentication Pages - Terminal Aesthetic */
+
+/* Page Layout */
+.container {
+    max-width: 500px;
+    margin: 2rem auto;
+    padding: 1rem;
+}
+
+/* Header */
+header {
+    text-align: center;
+    margin-bottom: 2rem;
+    border: 1px solid var(--terminal-border);
+    padding: 1.5rem;
+}
+
+header h1 {
+    color: var(--terminal-text);
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+header h1::before {
+    content: '# ';
+    color: var(--terminal-highlight);
+}
+
+header p {
+    color: var(--terminal-text-dim);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+/* Form Container */
+.form-container {
+    border: 1px solid var(--terminal-border);
+    padding: 2rem;
+    background: var(--terminal-bg);
+}
+
+.form-container h2 {
+    text-align: center;
+    color: var(--terminal-text);
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.form-container h2::before {
+    content: '> ';
+    color: var(--terminal-highlight);
+}
+
+/* Form Elements */
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    color: var(--terminal-text);
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 0.9rem;
+}
+
+.form-group label::before {
+    content: '$ ';
+    color: var(--terminal-success);
+}
+
+/* Terminal Input Styling */
+.auth-input {
+    width: 100%;
+    padding: 1rem;
+    background: var(--terminal-bg);
+    border: 1px solid var(--terminal-border);
+    color: var(--terminal-text);
+    font-family: inherit;
+    font-size: inherit;
+    transition: all 0.2s ease;
+    letter-spacing: 1px;
+}
+
+.auth-input:focus {
+    outline: none;
+    border-color: var(--terminal-text);
+    box-shadow: 0 0 0 1px var(--terminal-text);
+}
+
+.auth-input::placeholder {
+    color: var(--terminal-border);
+    font-style: italic;
+}
+
+/* Form Actions */
+.auth-form-group-center {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.auth-btn {
+    padding: 1rem 2rem;
+    background: transparent;
+    border: 1px solid var(--terminal-highlight);
+    color: var(--terminal-highlight);
+    font-family: inherit;
+    font-size: inherit;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    min-width: 200px;
+}
+
+.auth-btn:hover {
+    background: var(--terminal-highlight);
+    color: var(--terminal-bg);
+}
+
+.auth-btn::before {
+    content: '>> ';
+}
+
+/* Navigation Links */
+.nav-links {
+    text-align: center;
+    margin-top: 2rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--terminal-border);
+}
+
+.auth-nav-link {
+    color: var(--terminal-text-dim);
+    text-decoration: none;
+    display: inline-block;
+    margin: 0.5rem 1rem;
+    padding: 0.5rem;
+    transition: color 0.2s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 0.9rem;
+}
+
+.auth-nav-link:hover {
+    color: var(--terminal-text);
+    text-decoration: underline;
+}
+
+.auth-nav-link::before {
+    content: '[ ';
+    color: var(--terminal-border);
+}
+
+.auth-nav-link::after {
+    content: ' ]';
+    color: var(--terminal-border);
+}
+
+/* Error and Success Messages */
+.error-message {
+    border: 1px solid var(--terminal-error);
+    color: var(--terminal-error);
+    padding: 1rem;
+    margin-bottom: 1rem;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 0.9rem;
+}
+
+.error-message::before {
+    content: '[ERROR] ';
+    color: var(--terminal-error);
+}
+
+.success-message {
+    border: 1px solid var(--terminal-success);
+    color: var(--terminal-success);
+    padding: 1rem;
+    margin-bottom: 1rem;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 0.9rem;
+}
+
+.success-message::before {
+    content: '[SUCCESS] ';
+    color: var(--terminal-success);
+}
+
+/* Terminal Loading Effect */
+.loading {
+    color: var(--terminal-text-dim);
+    text-align: center;
+    padding: 1rem;
+}
+
+.loading::after {
+    content: '';
+    display: inline-block;
+    animation: dots 1.5s infinite;
+}
+
+@keyframes dots {
+    0%, 20% { content: ''; }
+    40% { content: '.'; }
+    60% { content: '..'; }
+    80%, 100% { content: '...'; }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .container {
+        margin: 1rem auto;
+        padding: 0.5rem;
+    }
+    
+    header {
+        padding: 1rem;
+    }
+    
+    .form-container {
+        padding: 1.5rem;
+    }
+    
+    .auth-btn {
+        min-width: 150px;
+        padding: 0.75rem 1.5rem;
+    }
+    
+    .auth-nav-link {
+        display: block;
+        margin: 0.5rem 0;
+    }
+}

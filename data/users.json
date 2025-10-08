@@ -1,0 +1,76 @@
+[
+    {
+        "user_id": "user_6873029e170701.63832540",
+        "username": "kola",
+        "password": "kola",
+        "registration_time": "2025-07-13 00:49:34",
+        "total_score": 936,
+        "cases_completed": [
+            {
+                "case_id": "missing_heirloom",
+                "score": 300,
+                "completed_at": "2025-07-13 02:51:30",
+                "time_taken": 130,
+                "status": "solved"
+            },
+            {
+                "case_id": "night_museum",
+                "score": 0,
+                "completed_at": "2025-07-13 03:08:30",
+                "time_taken": 148,
+                "status": "failed"
+            },
+            {
+                "case_id": "corporate_conspiracy",
+                "score": 636,
+                "completed_at": "2025-07-13 22:05:31",
+                "time_taken": 4577,
+                "status": "solved"
+            }
+        ],
+        "achievements": []
+    },
+    {
+        "user_id": "user_6873efd4d06a88.76473110",
+        "username": "user_2_test",
+        "password": "user_2_test",
+        "registration_time": "2025-07-13 17:41:40",
+        "total_score": 350,
+        "cases_completed": [
+            {
+                "case_id": "missing_heirloom",
+                "score": 350,
+                "completed_at": "2025-07-13 18:46:53",
+                "time_taken": 57,
+                "status": "solved"
+            }
+        ],
+        "achievements": []
+    },
+    {
+        "user_id": "user_687403c9d21626.46424666",
+        "username": "user_3_test",
+        "password": "user_3_test",
+        "registration_time": "2025-07-13 19:06:49",
+        "total_score": 350,
+        "cases_completed": [
+            {
+                "case_id": "missing_heirloom",
+                "score": 350,
+                "completed_at": "2025-07-13 19:07:55",
+                "time_taken": 55,
+                "status": "solved"
+            }
+        ],
+        "achievements": []
+    },
+    {
+        "user_id": "user_687458fbafca32.55253231",
+        "username": "test_user_1752455419",
+        "password": "test123",
+        "registration_time": "2025-07-14 01:10:19",
+        "total_score": 0,
+        "cases_completed": [],
+        "achievements": []
+    }
+]

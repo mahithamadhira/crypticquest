@@ -1,0 +1,362 @@
+/* Leaderboard Page - Terminal Aesthetic */
+
+/* Page Header */
+header {
+    text-align: center;
+    margin-bottom: 2rem;
+    border: 1px solid var(--terminal-border);
+    padding: 1.5rem;
+}
+
+header h1::before {
+    content: '# ';
+    color: var(--terminal-highlight);
+}
+
+/* User Position */
+.user-position {
+    border: 1px solid var(--terminal-border);
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.user-position h3 {
+    color: var(--terminal-text);
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+}
+
+.user-position h3::before {
+    content: '$ ';
+    color: var(--terminal-success);
+}
+
+.position-card {
+    border: 1px solid var(--terminal-highlight);
+    padding: 1rem;
+    background: var(--terminal-bg);
+}
+
+.position-info {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.rank-number {
+    font-size: 1.5rem;
+    color: var(--terminal-highlight);
+    min-width: 60px;
+    text-align: center;
+    border: 1px solid var(--terminal-highlight);
+    padding: 0.5rem;
+}
+
+.user-details h4 {
+    color: var(--terminal-text);
+    margin-bottom: 0.25rem;
+    text-transform: uppercase;
+}
+
+.user-details p {
+    color: var(--terminal-text-dim);
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+/* Top Performers */
+.top-performers {
+    border: 1px solid var(--terminal-border);
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.top-performers h3 {
+    color: var(--terminal-text);
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+}
+
+.top-performers h3::before {
+    content: '@ ';
+    color: var(--terminal-highlight);
+}
+
+.performers-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+}
+
+.performer-card {
+    border: 1px solid var(--terminal-border);
+    padding: 1rem;
+    text-align: center;
+    position: relative;
+}
+
+.performer-card .rank-number {
+    position: absolute;
+    top: -8px;
+    left: -8px;
+    font-size: 0.8rem;
+    min-width: 20px;
+    padding: 0.25rem;
+    background: var(--terminal-bg);
+}
+
+.performer-card h4 {
+    color: var(--terminal-text);
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+}
+
+.performer-name {
+    color: var(--terminal-highlight);
+    font-weight: normal;
+    margin-bottom: 0.25rem;
+}
+
+.performer-stat {
+    color: var(--terminal-text-dim);
+    font-size: 0.9rem;
+}
+
+/* Leaderboard Filters */
+.leaderboard-filters {
+    border: 1px solid var(--terminal-border);
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.filter-section {
+    margin-bottom: 1rem;
+}
+
+.filter-section:last-child {
+    margin-bottom: 0;
+}
+
+.filter-section h4 {
+    color: var(--terminal-text);
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+}
+
+.filter-section h4::before {
+    content: '> ';
+    color: var(--terminal-success);
+}
+
+.filter-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.filter-btn {
+    padding: 0.5rem 1rem;
+    background: transparent;
+    border: 1px solid var(--terminal-border);
+    color: var(--terminal-text-dim);
+    text-decoration: none;
+    font-family: inherit;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.2s ease;
+}
+
+.filter-btn:hover {
+    border-color: var(--terminal-text);
+    color: var(--terminal-text);
+}
+
+.filter-btn.active {
+    background: var(--terminal-text);
+    color: var(--terminal-bg);
+}
+
+/* Leaderboard Table */
+.leaderboard-table {
+    border: 1px solid var(--terminal-border);
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.leaderboard-table h3 {
+    color: var(--terminal-text);
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+}
+
+.leaderboard-table h3::before {
+    content: '# ';
+    color: var(--terminal-highlight);
+}
+
+.table-container {
+    overflow-x: auto;
+}
+
+.leaderboard {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.leaderboard th {
+    background: var(--terminal-bg);
+    color: var(--terminal-text);
+    padding: 0.75rem;
+    border: 1px solid var(--terminal-border);
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+}
+
+.leaderboard td {
+    padding: 0.75rem;
+    border: 1px solid var(--terminal-border);
+    color: var(--terminal-text-dim);
+}
+
+.leaderboard tr.current-user {
+    background: rgba(0, 255, 0, 0.1);
+}
+
+.leaderboard tr.current-user td {
+    color: var(--terminal-text);
+}
+
+.rank-position {
+    color: var(--terminal-highlight);
+    font-weight: normal;
+}
+
+.detective-name {
+    color: var(--terminal-text);
+}
+
+.you-indicator {
+    color: var(--terminal-success);
+    font-size: 0.8rem;
+}
+
+.score-value {
+    color: var(--terminal-highlight);
+    font-weight: normal;
+}
+
+.cases-count {
+    color: var(--terminal-text);
+}
+
+.accuracy-percentage {
+    color: var(--terminal-text);
+    display: block;
+    margin-bottom: 0.25rem;
+}
+
+.accuracy-bar {
+    width: 60px;
+    height: 8px;
+    border: 1px solid var(--terminal-border);
+    position: relative;
+    margin: 0 auto;
+}
+
+.accuracy-fill {
+    height: 100%;
+    background: var(--terminal-success);
+    transition: width 0.3s ease;
+}
+
+.last-activity {
+    color: var(--terminal-text-dim);
+    font-size: 0.8rem;
+}
+
+/* Community Statistics */
+.leaderboard-stats {
+    border: 1px solid var(--terminal-border);
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.leaderboard-stats h3 {
+    color: var(--terminal-text);
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+}
+
+.leaderboard-stats h3::before {
+    content: '* ';
+    color: var(--terminal-highlight);
+}
+
+.community-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1rem;
+}
+
+.stat-item {
+    text-align: center;
+    border: 1px solid var(--terminal-border);
+    padding: 1rem;
+}
+
+.stat-number {
+    display: block;
+    font-size: 1.5rem;
+    color: var(--terminal-highlight);
+    margin-bottom: 0.25rem;
+}
+
+.stat-label {
+    color: var(--terminal-text-dim);
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Actions */
+.leaderboard-actions {
+    text-align: center;
+    padding: 1rem;
+}
+
+.leaderboard-actions .btn {
+    margin: 0 0.5rem;
+}
+
+/* No Data State */
+.no-data {
+    text-align: center;
+    padding: 2rem;
+    color: var(--terminal-text-dim);
+    border: 1px solid var(--terminal-border);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .performers-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .filter-buttons {
+        flex-direction: column;
+    }
+    
+    .position-info {
+        flex-direction: column;
+        text-align: center;
+        gap: 0.5rem;
+    }
+    
+    .community-stats {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}

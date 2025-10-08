@@ -1,0 +1,46 @@
+[
+    {
+        "username": "kola",
+        "total_score": 936,
+        "total_cases": 3,
+        "solved_cases": 2,
+        "failed_cases": 1,
+        "accuracy_rate": 67,
+        "last_activity": "2025-07-13 22:05:31",
+        "best_score": 636,
+        "average_score": 312
+    },
+    {
+        "username": "user_2_test",
+        "total_score": 350,
+        "total_cases": 1,
+        "solved_cases": 1,
+        "failed_cases": 0,
+        "accuracy_rate": 100,
+        "last_activity": "2025-07-13 18:46:53",
+        "best_score": 350,
+        "average_score": 350
+    },
+    {
+        "username": "user_3_test",
+        "total_score": 350,
+        "total_cases": 1,
+        "solved_cases": 1,
+        "failed_cases": 0,
+        "accuracy_rate": 100,
+        "last_activity": "2025-07-13 19:07:55",
+        "best_score": 350,
+        "average_score": 350
+    },
+    {
+        "username": "test_user_1752455419",
+        "total_score": 0,
+        "total_cases": 0,
+        "solved_cases": 0,
+        "failed_cases": 0,
+        "accuracy_rate": 0,
+        "last_activity": "2025-07-14 01:10:19",
+        "best_score": 0,
+        "average_score": 0
+    }
+]

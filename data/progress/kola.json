@@ -1,0 +1,37 @@
+{
+    "corporate_conspiracy": {
+        "case_id": "corporate_conspiracy",
+        "start_time": 1752439754,
+        "evidence_collected": [
+            "trading_records",
+            "email_communications",
+            "financial_pressure"
+        ],
+        "hints_used": 3,
+        "current_phase": "investigation",
+        "score": 0,
+        "last_updated": 1752444319,
+        "cross_reference": {
+            "selected_evidence": [
+                "trading_records",
+                "financial_pressure",
+                "email_communications"
+            ],
+            "connections": {
+                "email_communications_financial_pressure": {
+                    "evidence1": "email_communications",
+                    "evidence2": "financial_pressure",
+                    "type": "supports",
+                    "created_at": 1752443041
+                },
+                "trading_records_email_communications": {
+                    "evidence1": "trading_records",
+                    "evidence2": "email_communications",
+                    "type": "related",
+                    "created_at": 1752443087
+                }
+            }
+        },
+        "investigation_notes": "he knows...."
+    }
+}

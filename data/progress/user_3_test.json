@@ -1,0 +1,19 @@
+{
+    "corporate_conspiracy": {
+        "case_id": "corporate_conspiracy",
+        "start_time": 1752444672,
+        "evidence_collected": [
+            "trading_records"
+        ],
+        "hints_used": 0,
+        "current_phase": "investigation",
+        "score": 0,
+        "cross_reference": {
+            "selected_evidence": [],
+            "connections": [],
+            "analysis_notes": ""
+        },
+        "investigation_notes": "",
+        "last_updated": 1752444699
+    }
+}
