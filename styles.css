@@ -1,0 +1,127 @@
+body {
+  margin: 0;
+  font-family: sans-serif;
+  background: url("bg-img.jpg") repeat fixed;
+  background-size: cover;
+  color: #011f4b;
+  line-height: 1.6;
+}
+
+/* Header */
+header {
+  text-align: center;
+  padding: 30px 10px 10px;
+}
+
+.profile-pic {
+  width: 120px;
+  border-radius: 50%;
+  border: 2px solid #005b96;
+}
+
+/* Layout using grid */
+.layout {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  gap: 40px;
+  padding: 30px 50px;
+}
+
+/* Remove all backgrounds and borders */
+.sidebar,
+.content,
+footer,
+header {
+  background: none;
+  box-shadow: none;
+  border: none;
+}
+
+/* Sidebar styles */
+.sidebar ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+/* Typography */
+h1, h2, h3 {
+  color: #03396c;
+  margin-top: 0;
+}
+
+/* Zebra-striped table (no borders) */
+.zebra {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.zebra td {
+  padding: 10px;
+  background-color: #e0ebee; 
+}
+
+.zebra tr:nth-child(even) td {
+  background-color: #f3f7f8; 
+}
+
+.zebra tr:nth-child(odd) td {
+  background-color: #e0ebee;
+}
+
+.zebra a {
+  text-decoration: none;
+  color: #336d8e; 
+}
+
+.zebra a:hover {
+  color: #23495e;
+  text-decoration: underline;
+}
+
+
+/* Links */
+a {
+  color: #005b96;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+a:hover {
+  color: #03396c;
+  background-color: rgba(179, 205, 224, 0.5);
+  padding: 1px 3px;
+  border-radius: 3px;
+}
+
+/* Quote */
+.quote {
+  margin: 20px;
+  padding: 10px 15px;
+  font-style: italic;
+  border-left: 4px solid #005b96;
+  font-size: 1.05rem;
+  color: #03396c;
+  background-color: rgba(179, 205, 224, 0.3);
+}
+
+.quote-author {
+  display: block;
+  margin-top: 8px;
+  font-size: 0.95em;
+  color: #6497b1;
+  font-style: normal;
+}
+
+/* Highlighted keywords */
+.highlight {
+  color: #b30059;
+  font-weight: bold;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  font-size: 0.85rem;
+  padding: 20px;
+  color: #6497b1;
+}
